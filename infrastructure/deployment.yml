@@ -18,8 +18,8 @@ spec:
         image: terraregistry2024.azurecr.io/welcome:latest
         resources:
          requests:
-          cpu:400m
+          cpu: "100m"
          limits:
-          cpu:1Gi
+          cpu: "200m"
         ports:
         - containerPort: 80
