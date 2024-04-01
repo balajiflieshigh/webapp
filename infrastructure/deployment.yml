@@ -8,6 +8,11 @@ spec:
     matchLabels:
       app: webapp
   replicas: 2
+  resources:
+   requests:
+     cpu:400m
+   limits:
+     cpu:1Gi
   template:
     metadata:
       labels:
