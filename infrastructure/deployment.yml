@@ -16,5 +16,10 @@ spec:
       containers:
       - name: webapp
         image: terraregistry2024.azurecr.io/welcome:latest
+        resources:
+         requests:
+          cpu: "100m"
+         limits:
+          cpu: "200m"
         ports:
         - containerPort: 80
