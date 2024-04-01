@@ -8,11 +8,6 @@ spec:
     matchLabels:
       app: webapp
   replicas: 2
-  resources:
-   requests:
-     cpu:400m
-   limits:
-     cpu:1Gi
   template:
     metadata:
       labels:
@@ -21,5 +16,10 @@ spec:
       containers:
       - name: webapp
         image: terraregistry2024.azurecr.io/welcome:latest
+        resources:
+         requests:
+          cpu:400m
+         limits:
+          cpu:1Gi
         ports:
         - containerPort: 80
