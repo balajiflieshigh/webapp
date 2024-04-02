@@ -2,11 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp-deployment
+  namespace: default
 spec:
   selector:
     matchLabels:
       app: webapp
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -15,5 +16,10 @@ spec:
       containers:
       - name: webapp
         image: terraregistry2024.azurecr.io/welcome:latest
+        resources:
+         requests:
+          cpu: "100m"
+         limits:
+          cpu: "200m"
         ports:
         - containerPort: 80
