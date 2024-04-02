@@ -1,0 +1,9 @@
+resource_group_name = "aks_terraform_web_rg"
+location            = "East US"
+container_registry = "terraregistry2024"
+cluster_name        = "terraform-aks"
+kubernetes_version  = "1.28.5"
+system_node_count   = 2
+node_resource_group = "aks_terraform_web_node_rg"
+storage = "terrastorage2024"
+container = "tfstate"
